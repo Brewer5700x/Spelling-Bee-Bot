@@ -1,1 +1,1 @@
-# Spelling-Bee-Bot
+# Spelling Bee Bot
