@@ -17,6 +17,7 @@ while True:
         break
     else:
         goodLetters.append(letter)
+reqdLetter = input("Required Letter:")
 for letter in goodLetters:
     if letter in allLetters:
         allLetters.remove(letter)
@@ -31,16 +32,13 @@ for word in tqdm(allWords, desc="Loading"):
             badWord = True
     if not badWord:
         goodWords.append(word)
-        goodWords.append("\n")
 
 # Remove words without required letter and short words
-reqdLetter = "a"
 dummy = goodWords
 goodWords = []
 for word in tqdm(dummy, desc="Loading"):
     if reqdLetter in word and len(word) > 3:
         goodWords.append(word)
-        goodWords.append("\n")
 
 sleep(5)
 
